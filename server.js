@@ -1,6 +1,26 @@
-var http = require('http')
- var port = process.env.PORT || 1337;
- http.createServer(function(req, res) {
-   res.writeHead(200, { 'Content-Type': 'text/plain' });
-   res.end('Hello World one two three four\n');
- }).listen(port);
+var express = require('express');
+var app = express();
+
+var server = app.listen(process.env.PORT || 1337, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log("Example app listening at http://%s:%s", host, port)
+})
+
+app.get('/', function (req, res) {
+
+	res.end( "home page" );
+})
+
+//query example
+app.get('/listUsers', function (req, res) {
+
+})
+
+//query the database here
+app.get('/:id', function (req, res) {
+   // First read existing users.
+   
+})
