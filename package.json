@@ -1,7 +1,6 @@
 {
   "name": "hackstreet",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "dependencies": {
     "express": "^4.14.1"
@@ -20,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/KuffourJason/HackStreet/issues"
   },
-  "homepage": "https://github.com/KuffourJason/HackStreet#readme"
+  "homepage": "https://github.com/KuffourJason/HackStreet#readme",
+  "description": ""
 }
