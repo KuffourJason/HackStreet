@@ -1,19 +1,8 @@
-const express = require('express')  
-const app = express()  
-const port = process.env.PORT || 1337
+var http = require('http')
 
-app.get('/', (request, response) => {  
-  response.send('Hello from Express!')
-})
-
-app.post('/', (request, response) => {  
-  response.send('Hello from Express post!')
-})
-
-app.listen(port, (err) => {  
-  if (err) {
-    return console.log('something bad happened', err)
-  }
-
-  console.log(`server is listening on ${port}`)
-})
+ var port = process.env.PORT || 1337;
+ 
+ http.createServer(function(req, res) {
+   res.writeHead(200, { 'Content-Type': 'text/plain' });
+   res.end('Hello World\n');
+ }).listen(port);
