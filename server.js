@@ -1,16 +1,9 @@
+var http = require('http');
 var express = require('express');
 var app = express();
-
-var server = app.listen(process.env.PORT, function () {
-
-  var host = server.address().address
-  var port = server.address().port
-
-  console.log("Example app listening at http://%s:%s", host, port)
-})
+var server = http.createServer(app);
 
 app.get('/', function (req, res) {
-
 	res.end( "home page" );
 })
 
@@ -24,3 +17,6 @@ app.get('/:id', function (req, res) {
    // First read existing users.
    
 })
+
+ server.listen(process.env.PORT || 8080, function () { // fifth and final change
+ });
