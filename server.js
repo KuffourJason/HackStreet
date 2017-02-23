@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-var server = app.listen(process.env.PORT || 1337, "hfest.azurewebsites.net", function () {
+var server = app.listen(process.env.PORT, function () {
 
   var host = server.address().address
   var port = server.address().port
