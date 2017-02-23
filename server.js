@@ -4,6 +4,7 @@ var app = express();
 var server = http.createServer(app);
 
 app.get('/', function (req, res) {
+	res.writeHead(200, { 'Content-Type': 'text/plain' });
 	res.end( "home page" );
 })
 
@@ -18,5 +19,5 @@ app.get('/:id', function (req, res) {
    
 })
 
- server.listen(process.env.PORT || 8080, function () { // fifth and final change
+ server.listen(process.env.PORT || 8080, function () { // fifth and final change 
  });
