@@ -1,21 +1,19 @@
-var http = require('http');
-var express = require('express');
+const express = require('express')  
+const app = express()  
+const port = process.env.PORT || 1337
 
-var app = express();
-app.listen(process.env.PORT || 8000);
-
-app.get('/', function (req, res) {
-	res.writeHead(200, { 'Content-Type': 'text/plain' });
-	res.end( "home page" );
+app.get('/', (request, response) => {  
+  response.send('Hello from Express!')
 })
 
-//query example
-app.get('/listUsers', function (req, res) {
-
+app.post('/', (request, response) => {  
+  response.send('Hello from Express post!')
 })
 
-//query the database here
-app.get('/:id', function (req, res) {
-   // First read existing users.
-   
+app.listen(port, (err) => {  
+  if (err) {
+    return console.log('something bad happened', err)
+  }
+
+  console.log(`server is listening on ${port}`)
 })
