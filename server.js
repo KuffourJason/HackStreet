@@ -10,8 +10,8 @@ app.listen(process.env.PORT || 8000);
 
 
 var config = {  
-	userName: 'jasfour@kugar',  
-        password: 'Eugene12345',  
+	userName: '-------',  
+        password: '--------',  
         server: 'kugar.database.windows.net',  
         // If you are on Microsoft Azure, you need this:  
         options: {encrypt: true, database: 'RX'}  
